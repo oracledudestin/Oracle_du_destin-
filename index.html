@@ -25,8 +25,6 @@ body {
     padding: 25px 18px 50px;
 }
 
-/* ACCUEIL */
-
 .hero {
     text-align: center;
     padding: 50px 20px;
@@ -82,8 +80,6 @@ p {
     line-height: 1.5;
 }
 
-/* BOUTONS */
-
 .btn {
     display: inline-block;
     background: #6d4aa2;
@@ -106,8 +102,6 @@ p {
     margin-top: 20px;
     font-size: 17px;
 }
-
-/* OPTIONS */
 
 .options {
     display: grid;
@@ -136,8 +130,6 @@ p {
     font-size: 15px;
     color: #625a68;
 }
-
-/* FORMULAIRES */
 
 .formulaire {
     display: none;
@@ -171,13 +163,9 @@ textarea {
     gap: 15px;
 }
 
-/* RETOUR */
-
 .retour {
     border-top: 3px solid #b8944f;
 }
-
-/* CONFIRMATION */
 
 .success {
     display: none;
@@ -188,16 +176,12 @@ textarea {
     font-size: 48px;
 }
 
-/* FOOTER */
-
 footer {
     text-align: center;
     padding: 25px 10px;
     color: #716878;
     font-size: 12px;
 }
-
-/* MOBILE */
 
 @media (max-width: 650px) {
 
@@ -228,8 +212,6 @@ footer {
 <div class="container">
 
 
-<!-- ACCUEIL -->
-
 <header class="hero">
 
     <div class="logo">
@@ -248,8 +230,6 @@ footer {
 </header>
 
 
-<!-- CHOIX DE LA CONSULTATION -->
-
 <section id="choix">
 
     <h2>
@@ -257,9 +237,6 @@ footer {
     </h2>
 
     <div class="options">
-
-
-        <!-- OPTION GRATUITE -->
 
         <div class="option">
 
@@ -285,8 +262,6 @@ footer {
 
         </div>
 
-
-        <!-- OPTION RETOUR D'AFFECTION -->
 
         <div class="option retour">
 
@@ -336,6 +311,8 @@ footer {
 
     <form
         id="gratuiteForm"
+        action="https://formspree.io/f/xvkgqabw"
+        method="POST"
     >
 
         <label>
@@ -401,7 +378,7 @@ footer {
             ✨ Envoyer ma demande gratuite
         </button>
 
-    </form id="freeForm" action="https://formspree.io/f/xvkgqabw" method="POST"></form>
+    </form>
 
 </section>
 
@@ -425,7 +402,6 @@ footer {
     <form
         id="retourForm"
     >
-
 
         <h3>
             👤 Vos informations
@@ -648,8 +624,7 @@ footer {
             ❤️ Envoyer ma demande
         </button>
 
-
-    </form id="freeForm" action="https://formspree.io/f/xvkgqabw" method="POST"></form>
+    </form>
 
 </section>
 
@@ -670,110 +645,7 @@ footer {
     </h2>
 
     <p>
-        Votre demande a bien été enregistrée sur cette page.
+        Votre demande a bien été envoyée.
     </p>
 
-    <p class="note">
-        Cette première version est une maquette.
-        Les demandes ne sont pas encore envoyées automatiquement
-        par Internet.
-    </p>
-
-    <button
-        class="btn"
-        onclick="location.reload()"
-    >
-        Retour à l’accueil
-    </button>
-
-</section>
-
-
-<footer>
-
-    Oracle du Destin · Voyance & Guidance
-
-</footer>
-
-
-</div>
-
-
-<script>
-
-
-function cacherFormulaires() {
-
-    document.getElementById("formGratuite").style.display = "none";
-
-    document.getElementById("formRetour").style.display = "none";
-
-    document.getElementById("success").style.display = "none";
-
-}
-
-
-function ouvrirGratuite() {
-
-    cacherFormulaires();
-
-    document.getElementById("formGratuite").style.display = "block";
-
-    document.getElementById("formGratuite").scrollIntoView({
-        behavior: "smooth"
-    });
-
-}
-
-
-function ouvrirRetour() {
-
-    cacherFormulaires();
-
-    document.getElementById("formRetour").style.display = "block";
-
-    document.getElementById("formRetour").scrollIntoView({
-        behavior: "smooth"
-    });
-
-}
-
-
-document
-.getElementById("gratuiteForm")
-.addEventListener("submit", function(event) {
-
-    event.preventDefault();
-
-    document.getElementById("formGratuite").style.display = "none";
-
-    document.getElementById("success").style.display = "block";
-
-    document.getElementById("success").scrollIntoView({
-        behavior: "smooth"
-    });
-
-});
-
-
-document
-.getElementById("retourForm")
-.addEventListener("submit", function(event) {
-
-    event.preventDefault();
-
-    document.getElementById("formRetour").style.display = "none";
-
-    document.getElementById("success").style.display = "block";
-
-    document.getElementById("success").scrollIntoView({
-        behavior: "smooth"
-    });
-
-});
-
-
-</script>
-
-</body>
-  </html>
+    <p class="
